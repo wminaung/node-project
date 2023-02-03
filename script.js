@@ -6,7 +6,7 @@ const list = document.querySelector(".list-group");
 const input = document.querySelector("#inputGroupFile01");
 
 const dataFromServer = async () => {
-  const fetchData = await fetch("https://node-project-f2mq.onrender.com/users");
+  const fetchData = await fetch("https://ok-service.onrender.com/users");
   const data = await fetchData.json();
 
   for (let i = 0; i < data.length; i++) {
@@ -32,7 +32,7 @@ const dataFromServer = async () => {
     });
 
     const fetchForDelete = async () => {
-      const fet = await fetch("https://node-project-f2mq.onrender.com/users", {
+      const fet = await fetch("https://ok-service.onrender.com/users", {
         method: "DELETE",
         body: JSON.stringify({
           usrName: data[i].usrName,
@@ -52,7 +52,7 @@ dataFromServer();
 
 let userData;
 const registerUser = async () => {
-  const response = await fetch("https://node-project-f2mq.onrender.com/users", {
+  const response = await fetch("https://ok-service.onrender.com/users", {
     method: "POST",
     body: JSON.stringify(userData),
   });
@@ -73,7 +73,7 @@ btn.addEventListener("click", () => {
 
   const fileuplaod = async () => {
     const fetchForFileupload = await fetch(
-      "https://node-project-f2mq.onrender.com/fileupload",
+      "https://ok-service.onrender.com/fileupload",
       {
         method: "POST",
         body: input.files[0],
@@ -84,11 +84,11 @@ btn.addEventListener("click", () => {
   };
 
   const fetchForUpdate = async () => {
-    const fetcH = await fetch("https://node-project-f2mq.onrender.com/users");
+    const fetcH = await fetch("https://ok-service.onrender.com/users");
     const fetchData = await fetcH.json();
     const emailThatIhave = fetchData.find((usr) => usr.usrEmail === emailVal);
     if (emailThatIhave) {
-      await fetch("https://node-project-f2mq.onrender.com/users", {
+      await fetch("https://ok-service.onrender.com/users", {
         method: "PUT",
         body: JSON.stringify({
           newName: nameVal,
