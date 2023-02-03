@@ -1,7 +1,6 @@
 const fs = require("fs");
 const http = require("http");
-const { connect } = require("http2");
-const { json } = require("stream/consumers");
+
 const date = new Date();
 const users = [
   {
