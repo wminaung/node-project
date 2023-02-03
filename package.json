@@ -2,9 +2,9 @@
   "name": "25jan23",
   "version": "1.0.0",
   "description": "",
-  "main": "sever.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon sever.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
